@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <body>
+        <div id="A"></div>
+        <div id="B"></div>
+        <span id="C"></span>
+        <div id="D"></div>
+        <div id="E"></div>
+
+        <script>
+            // 노드 생성 후 DOM에 추가 --> 아래의 text 노드를 생성하는것 보다 무겁
+            document.getElementById('A').innerHTML = '<strong>Hi</string>';
+
+            // span#B 교체
+            document.getElementById('B').outerHTML = '<div id="B" class="new">Whats Shaking</div>';
+
+            // text 노드 생성해서 갱신
+            document.getElementById('C').textContent = 'dude';
+
+            // Text 노드 생성해서 갱신
+            document.getElementById('D').innerText = 'Keep it';
+
+            // Text 노드 생성 후 교체 (#E 자체가 삭제)
+            document.getElementById('E').outerText = 'real!';
+        </script>
+    </body>
+</html>

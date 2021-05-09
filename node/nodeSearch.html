@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <body>
+        <ul>
+            <!-- comment 1-->
+            <li id="A">foo</li>
+            <li id="B">bar</li>
+            <!-- comment 2-->
+        </ul>
+
+        <script>
+            var ul = document.querySelector('ul');
+
+            console.log(ul.firstElementChild); // li #A
+
+            console.log(ul.lastElementChild); // li #B
+
+            console.log(ul.querySelector('#A').nextElementSibling); // li #B
+
+            console.log(ul.querySelector('#B').previousElementSibling); // li #A
+
+            console.log(ul.children); // HTMLCollection 0 => li #A , 1 => li #B
+        </script>
+    </body>
+</html>

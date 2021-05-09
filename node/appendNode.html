@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <body>
+        <p>Hi</p>
+        <ul>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+
+        <div id="A">Hi1</div>
+        <div id="B">Dude1</div>
+
+        <div id="C">Hi2</div>
+        <div id="D">Dude2</div>
+
+        <script>
+            var elemNode = document.createElement('strong');
+            var textNode = document.createTextNode(' Dude');
+
+            document.querySelector('p').appendChild(elemNode);
+            document.querySelector('strong').appendChild(textNode);
+
+            // <p>Hi<strong> Dude</strong></p>
+
+            var li = document.createElement('li');
+            var text1 = document.createTextNode('1');
+            li.appendChild(text1);
+
+            var ul = document.querySelector('ul');
+
+            // 두번째 파라미터 생략시 appendChild 와 동일 동작
+            ul.insertBefore(li, ul.firstChild);
+
+            /*
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+            */
+
+            var divA = document.getElementById('A');
+            divA.parentNode.removeChild(divA);
+            // A 완전 삭제
+
+            var divB = document.getElementById('B').firstChild;
+            divB.parentNode.removeChild(divB);
+            // <div id="B"></div>
+
+            var divC = document.getElementById('C');
+            var newSpan = document.createElement('span');
+            newSpan.textContent = 'Howdy';
+            divC.parentNode.replaceChild(newSpan, divC);
+            // 노드 전체 변경 <span>Howdy</span>
+
+            var divD = document.getElementById('D').firstChild;
+            var newText = document.createTextNode('buddy');
+            divD.parentNode.replaceChild(newText, divD);
+            // 텍스트만 변경 <div id="D">buddy</div>
+
+
+            console.log(document.body.innerHTML);
+        </script>
+    </body>
+</html>

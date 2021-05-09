@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <body>
+        <ul>
+            <li>Hi</li>
+            <li>there</li>
+        </ul>
+        
+        <script>
+            var cloneUL1 = document.querySelector('ul').cloneNode();
+            // <ul></ul>
+
+            var cloneUL2 = document.querySelector('ul').cloneNode(true);
+            /* 하위까지 다 클론
+            <ul>
+            <li>Hi</li>
+            <li>there</li>
+            </ul>
+            */
+
+            console.log(cloneUL1);
+            console.log(cloneUL2);
+        </script>
+    </body>
+</html>
