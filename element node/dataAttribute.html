@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <body>
+            <div data-foo-foo="foo" data-bar-bar="bar"></div>
+
+            <script>
+                var elm = document.querySelector('div');
+
+                console.log(elm.dataset.fooFoo); // foo
+                console.log(elm.dataset.barBar); // bar
+
+                elm.dataset.gooGoo = 'goo';
+                console.log(elm.dataset);
+
+                console.log(elm);
+            </script>
+        </body>
+    </head>
+</html>

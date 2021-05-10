@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <body>
+        <a href="#" title="title" data-foo="dataFoo" style="margin:0;" class="yes" foo="boo" hidden="hidden">#link</a>
+
+        <script>
+
+            var atts = document.querySelector('a');
+
+            // remove
+            atts.removeAttribute('href');
+            atts.removeAttribute('title');
+            atts.removeAttribute('style');
+            atts.removeAttribute('data-foo');
+            atts.removeAttribute('class');
+            atts.removeAttribute('foo');
+            atts.removeAttribute('hidden');
+
+            // set
+            atts.setAttribute('href', '#');
+            atts.setAttribute('title', 'title');
+            atts.setAttribute('style', 'margin:0;');
+            atts.setAttribute('data-foo', 'dataFoo');
+            atts.setAttribute('class', 'yes');
+            atts.setAttribute('foo', 'boo');
+            atts.setAttribute('hidden', 'hidden');
+
+            // get
+            console.log(atts.getAttribute('href'));
+            console.log(atts.getAttribute('title'));
+            console.log(atts.getAttribute('style'));
+            console.log(atts.getAttribute('data-foo'));
+            console.log(atts.getAttribute('class'));
+            console.log(atts.getAttribute('foo'));
+            console.log(atts.getAttribute('hidden'));
+
+            // has?
+            console.log(atts.hasAttribute('href'));
+            console.log(atts.hasAttribute('not-exist'));
+        </script>
+    </body>
+</head>

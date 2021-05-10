@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <body>
+        <div class="big brown bear"></div>
+
+        <script>
+            var elm = document.querySelector('div');
+            console.log(elm.classList);
+            /*
+            DOMTokenList(3)
+            0: "big"
+            1: "brown"
+            2: "bear"
+            length: 3
+            value: "big brown bear"
+            */
+            console.log(elm.className); // big brown bear
+
+            elm.classList.add('cat');
+            elm.classList.remove('brown');
+            console.log(elm.classList);
+
+            console.log(elm.classList.contains('cat'));
+            console.log(elm.classList.contains('brown'));
+        </script>
+    </body>
+</html>
