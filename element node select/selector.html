@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <ul>
+                <li class="liClass">Hello</li>
+                <li class="liClass">big</li>
+                <li class="liClass">bad</li>
+                <li class="liClass">world</li>
+            </ul>
+
+            <script>
+                // 3 개 다 children 결과는 동일하지만, 1 이랑 2,3의 타입이 다름
+                console.log(document.querySelectorAll('li')); // NodeList --> 정적 snapshot
+                console.log(document.getElementsByTagName('li')); // HTMLCollection --> live 상태 반영
+                console.log(document.getElementsByClassName('liClass')); // HTMLCollection --> live 상태 반영
+
+                var ulElement = document.querySelector('ul').children;
+                console.log(ulElement); // HTMLCollection
+            </script>
+        </body>
+    </head>
+</html>
