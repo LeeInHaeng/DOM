@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head></head>
+    <body>
+        <ul></ul>
+
+        <script>
+
+            var docFrag = document.createDocumentFragment();
+
+            var colors = ["blue", "green", "red", "blue", "pink"];
+            colors.forEach(function(e) {
+                var li = document.createElement('li');
+                li.textContent = e;
+                docFrag.appendChild(li);
+            });
+
+            var ulElm = document.querySelector('ul');
+            ulElm.appendChild(docFrag.cloneNode(true));
+
+            // docFrag 하위 노드들 유지 --> 재사용 가능
+            console.log(docFrag);
+        </script>
+    </body>
+</html>

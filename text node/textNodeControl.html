@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <body>
+            <p>Go big Blue Blue</p>
+            <script>
+
+                var pElementText = document.querySelector('p').firstChild;
+
+                // 추가
+                pElementText.appendData('!');
+                // Go big Blue Blue!
+
+                // 첫번째 Blue 삭제
+                pElementText.deleteData(7,5);
+
+                // Blue 다시 삽입
+                pElementText.insertData(7, 'Blue ');
+
+                // Blue 를 Bunny 로 변경
+                pElementText.replaceData(7, 5, 'Bunny ');
+
+                // Blue Bunny 추출
+                console.log(pElementText.substringData(7, 10));
+
+            </script>
+        </body>
+    </head>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head></head>
+    <body>
+        <ul></ul>
+
+        <script>
+
+            var ulElm = document.querySelector('ul');
+            var docFrag = document.createDocumentFragment();
+
+            var colors = ["blue", "green", "red", "blue", "pink"];
+            colors.forEach(function(e) {
+                var li = document.createElement('li');
+                li.textContent = e;
+                docFrag.appendChild(li);
+            });
+
+            ulElm.appendChild(docFrag);
+
+            console.log(docFrag); // live 로 옮겨지면서 li 태그들 없어짐
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head></head>
+    <body>
+        <div></div>
+        <script>
+
+            var docFrag = document.createDocumentFragment();
+            var divElm = document.createElement('div');
+
+            // docFrag 에 div 추가
+            docFrag.appendChild(divElm);
+
+            docFrag.querySelector('div').innerHTML = '<ul><li>foo</li><li>bar</li></ul>';
+
+            // live 에 추가
+            document.querySelector('div').appendChild(docFrag.querySelector('div').firstChild);
+
+            console.log(docFrag);
+        </script>
+    </body>
+</html>
